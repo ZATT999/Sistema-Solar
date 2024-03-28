@@ -1,0 +1,262 @@
+
+.sistema-2d{
+    display: none;
+    position: fixed;
+    z-index: 111;
+    left: 0;
+    top: 3.7em;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.048);
+    overflow: hidden;
+}
+.sistema-solar {
+    position: fixed;
+    z-index: 111;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    animation: animación-abrir .2s linear forwards;
+  }
+  .cerrar{
+    position: absolute;
+     top: 10px;
+     bottom: 0;
+     right: 20px;
+     z-index: 111;
+     cursor: pointer;
+     font-size:3em;
+  }
+  .cerrar-sistema{
+    display: flex;
+    animation: animación-cerrar .2s linear forwards;
+  }
+  @keyframes animación-abrir {
+    from{
+     height: 0;
+    }
+    to{
+     height: 100vh;
+    }
+ }
+ @keyframes animación-cerrar {
+  from{
+   height: 100vh;
+  }
+  to{
+   height: 0;
+   display: none;
+  }
+}
+.contenedor-planetas {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transform-origin: left;
+    left: 50%;
+    position: absolute;
+    animation: infinite linear;
+  }
+
+  .planetas {
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  .sol {
+    height: calc(var(--viewport) / 8);
+    width: calc(var(--viewport) / 8);
+    background-image: url(/sources/2d/sol.webp);
+    background-size: 100%;
+    position: absolute;
+  }
+:root {
+    --viewport: 60vmin;
+  }
+.planetas2d{
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+}
+  .mercurio-contenedor {
+    width: calc(var(--viewport) / 6);
+    animation: mercurio 14s linear infinite;
+  }
+
+  .mercurio {
+    width: calc(var(--viewport) / 38);
+    height: calc(var(--viewport) / 38);
+    background-image: url(/sources/2d/mercurio.webp);
+  }
+  @keyframes mercurio {
+    from {
+      transform: rotate(-30deg);
+    }
+
+    to {
+      transform: rotate(330deg)
+    }
+  }
+
+  .venus-contenedor {
+    width: calc(var(--viewport) / 6.5);
+    animation: venus 14s linear infinite;
+  }
+
+  .venus {
+    height: calc(var(--viewport) / 30);
+    width: calc(var(--viewport) / 30);
+    background-image: url(/sources/2d/venus.webp);
+  }
+
+  @keyframes venus {
+    from {
+      transform: rotate(60deg);
+    }
+
+    to {
+      transform: rotate(420deg)
+    }
+  }
+
+  .tierra-contenedor {
+    width: calc(var(--viewport) / 4.5);
+    animation: tierra 14s linear infinite;
+  }
+
+  @keyframes tierra {
+    from {
+      transform: rotate(200deg)
+    }
+
+    to {
+      transform: rotate(560deg)
+    }
+  }
+
+  .tierra {
+    height: calc(var(--viewport) / 23);
+    width: calc(var(--viewport) / 23);
+    background-image: url(/sources/2d/La_tierra_00.webp);
+    background-size: cover;
+  }
+
+  .marte-contenedor {
+    width: calc(var(--viewport) / 3.49);
+    animation: marte 14s linear infinite;
+  }
+
+  .marte {
+    height: calc(var(--viewport) / 25.5);
+    width: calc(var(--viewport) / 25.5);
+    background-image: url(/sources/2d/marte.webp);
+    background-size: 110%;
+  }
+
+  @keyframes marte {
+    from {
+      transform: rotate(-100deg)
+    }
+
+    to {
+      transform: rotate(260deg)
+    }
+  }
+
+  .jupiter-contenedor {
+    width: calc(var(--viewport) / 2.5);
+    animation: jupiter 14s linear infinite;
+  }
+
+  .jupiter {
+    width: calc(var(--viewport) / 15);
+    height: calc(var(--viewport) / 15);
+    background-image: url(/sources/2d/jupiter.webp);
+    background-size: 110%;
+  }
+
+  @keyframes jupiter {
+    from {
+      transform: rotate(130deg)
+    }
+
+    to {
+      transform: rotate(490deg)
+    }
+  }
+
+  .saturno-contenedor {
+    width: calc(var(--viewport) / 1.91);
+    animation: saturno 14s linear infinite;
+
+  }
+
+  .saturno {
+    width: calc(var(--viewport) / 10);
+    height: calc(var(--viewport) / 20);
+    background-image: url(/sources/2d/saturno.webp);
+    background-size: 105%;
+  }
+
+  @keyframes saturno {
+    from {
+      transform: rotate(3);
+    }
+
+    to {
+      transform: rotate(360deg)
+    }
+  }
+
+  .urano-contenedor {
+    width: calc(var(--viewport) / 1.66);
+    animation: urano 14s linear infinite;
+  }
+
+  .urano {
+    height: calc(var(--viewport) / 17);
+    width: calc(var(--viewport) / 17);
+    background-image: url(/sources/2d/urano.webp);
+    background-size: 75%;
+  }
+
+  @keyframes urano {
+    from {
+      transform: rotate(-55deg)
+    }
+
+    to {
+      transform: rotate(305deg)
+    }
+  }
+
+  .neptuno-contenedor {
+    width: calc(var(--viewport) / 1.53);
+    animation: neptuno 14s linear infinite;
+  }
+
+  .neptuno {
+    height: calc(var(--viewport) / 30);
+    width: calc(var(--viewport) / 30);
+    background-image: url(/sources/2d/neptuno.webp);
+    background-size: 110%;
+    justify-content: end;
+  }
+
+  @keyframes neptuno {
+    from {
+      transform: rotate(220deg)
+    }
+
+    to {
+      transform: rotate(580deg)
+    }
+  }
+  .contenedor-planetas {
+    animation-play-state:running;
+  }

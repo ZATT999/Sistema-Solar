@@ -1,0 +1,123 @@
+.quiz{
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  top: 4em;
+  left: 0;
+  z-index: 111;
+  width: 100%;
+  height: 90vh;
+  background-color: rgb(20, 18, 18);
+  border: 5px solid rgb(20, 18, 18);
+  animation: animación-abrir .2s ease forwards;
+}
+.cerrar-quiz{
+    display: flex;
+    animation: animación-cerrar .2s linear forwards;
+  }
+@keyframes animación-abrir {
+    from{
+     height: 0;
+    }
+    to{
+     height: 100vh;
+    }
+ }
+ @keyframes animación-cerrar {
+  from{
+   height: 100vh;
+  }
+  to{
+   height: 0;
+   display: none;
+  }
+}
+.content-quiz{
+    margin: auto;
+    max-width:700px;
+    width: 700px;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 111;
+}
+.pregunta{
+    margin: 30px 0px 30px 0px;
+}
+.respuestas{
+    margin: 10px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.respuesta{
+    cursor: pointer;
+    align-items: center;
+    margin:20px 10px 20px 10px;
+    background-color:rgb(40, 40, 40);
+    width: 300px;
+    height: 35px;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    overflow:hidden;
+}
+#preguntas-amount{
+    text-align: end;
+}
+#btn-next-pregunta{
+    margin: 0;
+}
+.quiz-u{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+}
+.activada{
+    border-color: blue;
+}
+.tabla{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+table {
+    border-collapse: collapse;
+    width: 500px;
+    height: 400px;
+    margin: 20px;
+  }
+
+  th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 2px;
+  }
+  td{
+    height: 20px;
+  }
+  th{
+    height: 20px;
+  }
+
+  th {
+    background-color: black;
+  }
+
+  .correcto {
+    color: green;
+    text-align: center;
+  }
+
+  .incorrecto {
+    color: red;
+    text-align: center;
+  }
+  #btn-next-pregunta{
+       box-shadow: none;
+  }

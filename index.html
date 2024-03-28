@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="sources/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/css2d.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/quiz.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css">
+    <script src="JS/index.js" defer></script>
+    <script src="JS/js2d.js" defer></script>
+    <script src="JS/quiz-sistema-solar.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitema Solar</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <img src="sources/icon.jpg" alt="icono">
+        <div class="content-menu">
+            <span class="btn-cerrar-menu">&times;</span>
+            <ul class="menu">
+                <a href="index.html">
+                    <li class="selec">Sitema Solar</li>
+                </a>
+                <a href="Marte.html">
+                    <li class="selec">colonización De Marte</li>
+                </a>
+            </ul>
+        </div>
+        <div class="btn-menu">
+            <span class="linea"></span>
+            <span class="linea"></span>
+            <span class="linea"></span>
+        </div>
+    </nav>
+    <main>
+        <div class="slider">
+            <img src="sources/image-slider-sistema solar/1.jpg" alt="" id="img-slider" class="img-slider">
+            <img src="sources/image-slider-sistema solar/2.jpg" alt="" id="img-slider" class="img-slider">
+            <img src="sources/image-slider-sistema solar/3.jpg" alt="" class="img-slider" id="img-slider">
+            <img src="sources/image-slider-sistema solar/4.jpg" alt="" class="img-slider" id="img-slider">
+            <img src="sources/image-slider-sistema solar/5.jpg" alt="" class="img-slider" id="img-slider">
+        </div>
+        <section class="concept">
+            <h2 class="title">¿Que es el Sitema Solar?</h2>
+            <h4 class="row">&#709;</h4>
+            <div class="content-text">
+                <p>El sistema solar es un conjunto de objetos astronómicos que orbitan alrededor del Sol, nuestra
+                    estrella central. Incluye ocho planetas, como la Tierra, que giran en órbitas elípticas, junto con
+                    sus lunas, asteroides y cometas. El Sol, una esfera de plasma caliente, domina el sistema,
+                    proporcionando luz y energía. Los planetas interiores son rocosos, mientras que los exteriores son
+                    gaseosos. Este sistema dinámico se rige por las leyes de la gravedad y ha fascinado a la humanidad
+                    durante siglos.</p>
+            </div>
+            <div class="content-btn-sistema">
+            <button class="btn-ver-sistema btn" id="btn-ver-sistema">Ver Sistema Solar</button>
+            <button class="btn" id="btn-quiz">Iniciar Quiz</button>
+        </div>
+        </section>
+        <section class="sistema-2d">
+
+            <div class="sistema-solar">
+                <span class="cerrar" id="cerrar-stm">&times;</span>
+                <div class="sol planetas"></div>
+                <div class="mercurio-contenedor contenedor-planetas" id="2">
+                    <div class="mercurio planetas"></div>
+                </div>
+                <div class="venus-contenedor contenedor-planetas" id="3">
+                    <div class="venus planetas"></div>
+                </div>
+                <div class="tierra-contenedor contenedor-planetas" id="4">
+                    <div class="tierra planetas"></div>
+                </div>
+                <div class="marte-contenedor contenedor-planetas" id="5">
+                    <div class="marte planetas"></div>
+                </div>
+                <div class="jupiter-contenedor contenedor-planetas" id="6">
+                    <div class="jupiter planetas"></div>
+                </div>
+                <div class="saturno-contenedor contenedor-planetas" id="7">
+                    <div class="saturno planetas"></div>
+                </div>
+                <div class="urano-contenedor contenedor-planetas" id="8">
+                    <div class="urano planetas"></div>
+                </div>
+
+                <div class="neptuno-contenedor contenedor-planetas" id="9">
+                    <div class="neptuno planetas"></div>
+                </div>
+            </div>
+        </section>
+        <section class="quiz">
+            <section class="content-quiz">
+                <h2 class="pregunta" id="pregunta">pregunta</h2>
+                <div class="respuestas">
+                    <div class="respuesta" id="respuesta-1">
+
+                    </div>
+                    <div class="respuesta" id="respuesta-2">
+
+                    </div>
+                    <div class="respuesta" id="respuesta-3">
+
+                    </div>
+                    <div class="respuesta" id="respuesta-4">
+
+                    </div>
+                </div>
+                <div class="quiz-u">
+                    <p id="preguntas-amount">1/10</p>
+                    <button class="btn" id="btn-next-pregunta">Siguente</button>
+                </div>
+            </section>
+            <div class="tabla">
+                <h2 class="title">Tabla de Puntuación</h2>
+
+                <table>
+                    <tr>
+                        <th>Pregunta</th>
+                        <th>respuesta</th>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-1">Pregunta 1</td>
+                        <td id="si-no-1">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-2">Pregunta 2</td>
+                        <td id="si-no-2">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-3">Pregunta 3</td>
+                        <td id="si-no-3">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-4">Pregunta 4</td>
+                        <td id="si-no-4">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-5">Pregunta 5</td>
+                        <td id="si-no-5">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-6">Pregunta 6</td>
+                        <td id="si-no-6">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-7">Pregunta 7</td>
+                        <td id="si-no-7">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-8">Pregunta 8</td>
+                        <td id="si-no-8">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-9">Pregunta 9</td>
+                        <td id="si-no-9">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-10">Pregunta 10</td>
+                        <td id="si-no-10">No respondio</td>
+                    </tr>
+                </table>
+                <button class="btn" id="cerrar-quiz">Cerrar</button>
+            </div>
+        </section>
+
+        <h1 class="title">Planetas</h1>
+        <section class="planetas-info">
+            <span class="btn-up"></span>
+            <article class="planeta">
+                <img src="sources/2d/mercurio.webp" alt="planeta">
+                <h2 class="title">Mercurio</h2>
+                <div class="informacion">
+                    <p class="info-planetas">Tamaño<span>4.880km</span></p>
+                    <p class="info-planetas">Velocidad<span>170,503km/s</span></p>
+                    <p class="info-planetas">Temperatura<span>167 °C</span></p>
+                    <p class="info-planetas">Satelites<span>0</span></p>
+                    <p class="info-planetas">Distacia al Sol<span>57.9 mlkm</span></p>
+                </div>
+                <button class="btn" id="btn-mas-info">Mas informaciòn </button>
+
+                <div class="modal">
+                    <div class="modal-contenedor">
+                        <span class="cerrar">&times;</span>
+                        <h2 class="title">Mercurio</h2>
+                        <p>Mercurio, el planeta más cercano al Sol en nuestro sistema solar, es una esfera rocosa y
+                            desolada con una atmósfera tenue. Con temperaturas extremas que oscilan entre los -180
+                            grados Celsius durante la noche y los 430 grados Celsius durante el día, su superficie está
+                            marcada por vastas llanuras, escarpados acantilados y numerosos cráteres. Su órbita elíptica
+                            y lenta rotación generan días que duran aproximadamente dos tercios de sus años, y su
+                            ausencia casi total de atmósfera significativa contribuye a una notable variación térmica.
+                            Aunque ha sido visitado por misiones espaciales, como la sonda MESSENGER, Mercurio sigue
+                            siendo un misterioso mundo que ofrece valiosa información sobre la formación y evolución de
+                            los planetas rocosos en nuestro sistema solar..
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="planeta">
+                <img src="sources/2d/venus.webp" alt="planeta">
+                <h2 class="title">Venus</h2>
+                <div class="informacion">
+                    <p class="info-planetas">Tamaño<span>12,104 km</span></p>
+                    <p class="info-planetas">Velocidad<span>126,077 km/h</span></p>
+                    <p class="info-planetas">Temperatura<span>464 °C</span></p>
+                    <p class="info-planetas">Satelites<span>0</span></p>
+                    <p class="info-planetas">Distacia al Sol<span>108.2 mlkm</span></p>
+                </div>
+                <button class="btn" id="btn-mas-info">Mas informaciòn </button>
+                <div class="modal">
+                    <div class="modal-contenedor">
+                        <span class="cerrar">&times;</span>
+                        <h2 class="title">Venus</h2>
+                        <p>Venus, el segundo planeta del sistema solar, es conocido como el "gemelo" de la Tierra debido
+                            a su tamaño y composición similar. Sin embargo, es un mundo inhóspito con condiciones
+                            extremas. Su atmósfera densa está compuesta principalmente de dióxido de carbono y nubes de
+                            ácido sulfúrico, creando un efecto invernadero descontrolado que atrapa el calor. Las
+                            temperaturas en la superficie alcanzan hasta 467 grados Celsius, suficientes para fundir
+                            plomo. Venus rota en sentido contrario a la mayoría de los planetas, lo que significa que su
+                            día es más largo que su año. La exploración de Venus ha sido desafiante debido a su
+                            atmósfera hostil, pero las misiones espaciales han proporcionado valiosa información sobre
+                            este mundo volcánico y misterioso.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="planeta">
+                <img src="sources/2d/La_tierra_00.webp" alt="planeta">
+                <h2 class="title">La Tierra</h2>
+                <div class="informacion">
+                    <p class="info-planetas">Tamaño<span>12,742 km</span></p>
+                    <p class="info-planetas">Velocidad<span>107,226 km/h</span></p>
+                    <p class="info-planetas">Temperatura<span>14 °C</span></p>
+                    <p class="info-planetas">Satelites<span>1</span></p>
+                    <p class="info-planetas">Distacia al Sol<span>149.6 mlkm</span></p>
+                </div>
+                <button class="btn" id="btn-mas-info">Mas informaciòn </button>
+                <div class="modal">
+                    <div class="modal-contenedor">
+                        <span class="cerrar">&times;</span>
+                        <h2 class="title">La Tierra</h2>
+                        <p>La Tierra, nuestro hogar planetario, es un cuerpo celeste fascinante y único en el sistema
+                            solar. Conocido como el tercer planeta desde el Sol, este mundo rocoso alberga una asombrosa
+                            diversidad de vida. Su superficie está cubierta en su mayoría por océanos, con vastos
+                            continentes que ofrecen hábitats variados para plantas, animales y seres humanos.
+                            <br>
+                            La Tierra experimenta fenómenos naturales como cambios climáticos, ciclos estacionales y
+                            eventos geológicos que han dado forma a su paisaje a lo largo de millones de años. Este
+                            planeta sustenta la vida gracias a su atmósfera única, rica en oxígeno, que protege contra
+                            la radiación solar y regula la temperatura.
+                            <br>
+                            No obstante, la Tierra enfrenta desafíos, como el cambio climático y la pérdida de
+                            biodiversidad, que requieren atención y acción global. La comprensión y aprecio por nuestro
+                            planeta son fundamentales para preservar su belleza y garantizar un futuro sostenible para
+                            las generaciones venideras.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="planeta">
+                <img src="sources/2d/marte.webp" alt="planeta">
+                <h2 class="title">Marte</h2>
+                <div class="informacion">
+                    <p class="info-planetas">Tamaño<span>6,779 km</span></p>
+                    <p class="info-planetas">Velocidad<span>86,677 km/h</span></p>
+                    <p class="info-planetas">Temperatura<span>-80 °C</span></p>
+                    <p class="info-planetas">Satelites<span>2</span></p>
+                    <p class="info-planetas">Distacia al Sol<span>227.9 mlkm</span></p>
+                </div>
+                <button class="btn" id="btn-mas-info">Mas informaciòn </button>
+                <div class="modal">
+                    <div class="modal-contenedor">
+                        <span class="cerrar">&times;</span>
+                        <h2 class="title">Marte</h2>
+                        <p>Marte, el cuarto planeta del sistema solar, ha fascinado a la humanidad durante siglos. Conocido como el "Planeta Rojo" debido a su color característico, Marte alberga el monte más alto y el cañón más extenso del sistema solar. Su delgada atmósfera, compuesta principalmente de dióxido de carbono, sugiere la posible existencia de agua en forma líquida en el pasado. Los polos marcianos exhiben casquetes de hielo de agua y dióxido de carbono. La presencia de valles, cañones y antiguos lechos de ríos sugiere una historia geológica rica en actividad acuática. Marte ha sido objeto de numerosas misiones espaciales, y la búsqueda de signos de vida y la posibilidad de colonización futura son temas destacados de la investigación científica y la exploración espacial. Con avances continuos en la tecnología, la comprensión de Marte sigue evolucionando, inspirando el interés humano en la exploración del cosmos.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="planeta">
+                <img src="sources/2d/jupiter.webp" alt="planeta">
+                <h2 class="title">Jupiter</h2>
+                <div class="informacion">
+                    <p class="info-planetas">Tamaño<span>139,820 km</span></p>
+                    <p class="info-planetas">Velocidad<span>47,002 km/h</span></p>
+                    <p class="info-planetas">Temperatura<span>-145 °C</span></p>
+                    <p class="info-planetas">Satelites<span>79</span></p>
+                    <p class="info-planetas">Distacia al Sol<span>778.5 mlkm</span></p>
+                </div>
+                <button class="btn" id="btn-mas-info">Mas informaciòn </button>
+                <div class="modal">
+                    <div class="modal-contenedor">
+                        <span class="cerrar">&times;</span>
+                        <h2 class="title">Jupiter</h2>
+                        <p>Júpiter, el quinto planeta del sistema solar, es un gigante gaseoso compuesto principalmente de hidrógeno y helio. Con un diámetro de aproximadamente 142.984 kilómetros, es más grande que todos los demás planetas combinados. Su atmósfera presenta bandas de nubes en movimiento y la Gran Mancha Roja, una tormenta antinatural que ha perdurado durante siglos. Júpiter también alberga numerosas lunas, siendo las cuatro más grandes conocidas como las lunas galileanas: Ío, Europa, Ganimedes y Calisto. Ío exhibe intensa actividad volcánica, mientras que Europa podría albergar un océano subsuperficial que aviva la especulación sobre la posibilidad de vida extraterrestre. Júpiter, con su potente campo magnético, actúa como un guardián cósmico, desviando asteroides y cometas. Su estudio continuo mediante sondas espaciales, como la misión Juno, contribuye a una comprensión más profunda de la formación y evolución de los planetas gaseosos.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="planeta">
+                <img src="sources/2d/saturno.webp" alt="planeta">
+                <h2 class="title">Saturno</h2>
+                <div class="informacion">
+                    <p class="info-planetas">Tamaño<span>116,460 km</span></p>
+                    <p class="info-planetas">Velocidad<span>34,701 km/h</span></p>
+                    <p class="info-planetas">Temperatura<span>-178 °C</span></p>
+                    <p class="info-planetas">Satelites<span>83</span></p>
+                    <p class="info-planetas">Distacia al Sol<span>1,429 mlkm</span></p>
+                </div>
+                <button class="btn" id="btn-mas-info">Mas informaciòn </button>
+                <div class="modal">
+                    <div class="modal-contenedor">
+                        <span class="cerrar">&times;</span>
+                        <h2 class="title">Saturno</h2>
+                        <p>Saturno, el sexto planeta del sistema solar, destaca por sus impresionantes anillos, compuestos principalmente de partículas de hielo y roca. Este gigante gaseoso, conocido por su distintivo color amarillo pálido, posee un diámetro que es aproximadamente nueve veces mayor que el de la Tierra. Su atmósfera está compuesta mayormente de hidrógeno y helio, con características como tormentas y vientos veloces. Saturno tiene un sistema de anillos notorio, compuesto por miles de anillos delgados, divididos por brechas y divisiones. Su inconfundible apariencia lo convierte en uno de los objetos celestiales más fascinantes para la observación telescópica. Además, cuenta con una variada colección de lunas, siendo Titán la más grande y poseyendo una atmósfera densa. La sonda Cassini proporcionó datos valiosos, revelando detalles sobre la composición de sus anillos y atmosfera, contribuyendo así a nuestra comprensión del sistema solar exterior.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="planeta">
+                <img src="sources/2d/urano.webp" alt="planeta">
+                <h2 class="title">Urano</h2>
+                <div class="informacion">
+                    <p class="info-planetas">Tamaño<span>50,724 km</span></p>
+                    <p class="info-planetas">Velocidad<span>24,477 km/h</span></p>
+                    <p class="info-planetas">Temperatura<span>-224 °C</span></p>
+                    <p class="info-planetas">Satelites<span>27</span></p>
+                    <p class="info-planetas">Distacia al Sol<span>2,871 mlkm</span></p>
+                </div>
+                <button class="btn" id="btn-mas-info">Mas informaciòn </button>
+                <div class="modal">
+                    <div class="modal-contenedor">
+                        <span class="cerrar">&times;</span>
+                        <h2 class="title">Urano</h2>
+                        <p>Urano, el séptimo planeta del sistema solar, es un gigante gaseoso conocido por su color azul verdoso distintivo debido a la presencia de metano en su atmósfera. Descubierto por William Herschel en 1781, Urano tiene un eje de rotación inclinado de manera única, lo que resulta en un peculiar movimiento de "rodar" en lugar de girar como los demás planetas. Este gigante helado alberga anillos delgados y 27 lunas conocidas, destacando Titania y Oberon. Aunque su atmósfera está compuesta principalmente de hidrógeno y helio, también contiene trazas de metano, amoníaco y vapor de agua. Urano posee un sistema de anillos menos prominente en comparación con Júpiter y Saturno. Su misterioso campo magnético inclinado y su característica orientación única hacen de Urano un objeto celestial fascinante y enigmático en el vasto cosmos.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="planeta">
+                <img src="sources/2d/neptuno.webp" alt="planeta">
+                <h2 class="title">Neptuno</h2>
+                <div class="informacion">
+                    <p class="info-planetas">Tamaño<span>49,244 km</span></p>
+                    <p class="info-planetas">Velocidad<span>19,566 km/h</span></p>
+                    <p class="info-planetas">Temperatura<span>-218 °C</span></p>
+                    <p class="info-planetas">Satelites<span>14</span></p>
+                    <p class="info-planetas">Distacia al Sol<span>4,498 mlkm</span></p>
+                </div>
+                <button class="btn" id="btn-mas-info">Mas informaciòn </button>
+                <div class="modal">
+                    <div class="modal-contenedor">
+                        <span class="cerrar">&times;</span>
+                        <h2 class="title">Neptuno</h2>
+                        <p>Neptuno, el octavo planeta del sistema solar, es un mundo fascinante y enigmático ubicado
+                            en
+                            las
+                            profundidades del espacio. Su distintivo color azul proviene de la presencia de metano
+                            en su
+                            atmósfera, que absorbe la luz roja y refleja la azul. Es un gigante gaseoso, similar en
+                            composición a Urano, con una atmósfera compuesta principalmente de hidrógeno y helio.
+                            <br>
+                            Las características más notables de Neptuno son sus vientos extremadamente veloces y sus
+                            tormentas impresionantes, como la Gran Mancha Oscura. El planeta también alberga anillos
+                            tenues
+                            y un sistema de lunas, destacando Tritón, una luna inusual que tiene una órbita
+                            retrógrada y
+                            muestra evidencia de actividad geológica.
+                            <br>
+                            La exploración de Neptuno ha sido limitada, con la Voyager 2 siendo la única sonda en
+                            visitarlo
+                            en 1989. Su estudio continúa proporcionando información valiosa sobre los planetas
+                            gaseosos
+                            y
+                            los fenómenos atmosféricos extremos en el sistema solar exterior.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <h2 class="title">Misiones Fuera de la Tierra</h2>
+        <section class="misiones-f-tierra">
+            <article class="msn">
+                <h3 class="sub-title">Programa Apollo (NASA):</h3>
+                <p>El programa Apollo de la NASA, activo de 1961 a 1972, logró aterrizar a los primeros humanos en la
+                    Luna. La misión más icónica fue Apollo 11 en 1969, con Neil Armstrong y Buzz Aldrin caminando sobre
+                    la superficie lunar, marcando un hito histórico en la exploración espacial.
+                </p>
+            </article>
+            <article class="msn">
+                <h3 class="sub-title">Programa Mars Rover (NASA):</h3>
+                <p>El programa Mars Rover de la NASA ha enviado robots a Marte para investigar su geología y buscar
+                    signos de vida pasada. El rover más reciente, Perseverance, lanzado en 2020, busca rastros de vida
+                    microbiana y recopila datos esenciales para futuras misiones humanas al planeta rojo.
+                </p>
+            </article>
+            <article class="msn">
+                <h3 class="sub-title">Sonda Voyager (NASA):</h3>
+                <p>Lanzadas por la NASA en 1977, las sondas Voyager 1 y 2 han explorado los confines del sistema solar.
+                    Proporcionaron datos detallados sobre los planetas exteriores y sus lunas. Actualmente, viajan hacia
+                    el espacio interestelar, llevando consigo la "Golden Record" con información sobre la Tierra para
+                    posibles encuentros extraterrestres.
+                </p>
+            </article>
+            <article class="msn">
+                <h3 class="sub-title">Sonda Cassini-Huygens (NASA/ESA/ASI):</h3>
+                <p>La sonda Cassini-Huygens, lanzada en 1997 por la NASA, la ESA y ASI, exploró Saturno y sus lunas.
+                    Cassini estudió el planeta anillado, mientras que Huygens aterrizó en la luna Titán en 2005,
+                    proporcionando datos cruciales sobre la atmósfera y geología de este satélite único en el sistema
+                    solar.
+                </p>
+            </article>
+            <article class="msn">
+                <h3 class="sub-title">Sonda New Horizons (NASA):</h3>
+                <p>La sonda New Horizons de la NASA, lanzada en 2006, realizó el primer sobrevuelo de Plutón en 2015,
+                    proporcionando imágenes y datos reveladores sobre este lejano planeta enano y sus lunas. Su
+                    exploración ha ampliado nuestra comprensión del sistema solar exterior y la diversidad de cuerpos
+                    celestes que lo componen.
+                </p>
+            </article>
+            <article class="msn">
+                <h3 class="sub-title">Estación Espacial Internacional (varias agencias):</h3>
+                <p>La Estación Espacial Internacional (ISS) es una estructura en órbita terrestre, resultado de la
+                    colaboración de múltiples agencias espaciales, incluyendo NASA, Roscosmos, ESA y otras. Desde 1998,
+                    ha servido como laboratorio espacial para la investigación científica y ha acogido a astronautas de
+                    diversas nacionalidades en misiones continuas.
+                </p>
+            </article>
+        </section>
+
+    </main>
+</body>
+
+</html>

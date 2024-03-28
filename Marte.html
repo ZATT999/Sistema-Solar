@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css">    
+    <link rel="icon" href="sources/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/marte.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/quiz.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="JS/index.js" defer></script>
+    <script src="JS/quiz-marte.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marte</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <img src="sources/icon.jpg" alt="icono">
+        <div class="content-menu">
+            <span class="btn-cerrar-menu">&times;</span>
+            <ul class="menu">
+                <a href="index.html">
+                    <li class="selec">Sitema Solar</li>
+                </a>
+                <a href="Marte.html">
+                    <li class="selec">colonización De Marte</li>
+                </a>
+            </ul>
+        </div>
+        <div class="btn-menu">
+            <span class="linea"></span>
+            <span class="linea"></span>
+            <span class="linea"></span>
+        </div>
+    </nav>
+    <main>
+        <div class="slider">
+            <img src="sources/img-slider-marte/1.jpg" alt="" class="img-slider">
+            <img src="sources/img-slider-marte/2,jpg.jpg" alt="" class="img-slider">
+            <img src="sources/img-slider-marte/3.jpg" alt="" class="img-slider">
+            <img src="sources/img-slider-marte/4.jpg" alt="" class="img-slider">
+        </div>
+        <section class="concept">
+            <h2 class="title">¿Qué es Marte?</h2>
+            <h4 class="row">&#709;</h4>
+            <div class="content-text">
+                <p>El sistema solar es un conjunto de objetos astronómicos que orbitan alrededor del Sol, nuestra
+                    estrella central. Incluye ocho planetas, como la Tierra, que giran en órbitas elípticas, junto con
+                    sus lunas, asteroides y cometas. El Sol, una esfera de plasma caliente, domina el sistema,
+                    proporcionando luz y energía. Los planetas interiores son rocosos, mientras que los exteriores son
+                    gaseosos. Este sistema dinámico se rige por las leyes de la gravedad y ha fascinado a la humanidad
+                    durante siglos.</p>
+            </div>
+            <button class="btn" id="btn-quiz">Iniciar Quiz</button>
+        </section>
+        <section class="quiz">
+            <section class="content-quiz">
+                <h2 class="pregunta" id="pregunta">pregunta</h2>
+                <div class="respuestas">
+                    <div class="respuesta" id="respuesta-1">
+
+                    </div>
+                    <div class="respuesta" id="respuesta-2">
+
+                    </div>
+                    <div class="respuesta" id="respuesta-3">
+
+                    </div>
+                    <div class="respuesta" id="respuesta-4">
+
+                    </div>
+                </div>
+                <div class="quiz-u">
+                    <p id="preguntas-amount">1/10</p>
+                    <button class="btn" id="btn-next-pregunta">Siguente</button>
+                </div>
+            </section>
+            <div class="tabla">
+                <h2 class="title">Tabla de Puntuación</h2>
+
+                <table>
+                    <tr>
+                        <th>Pregunta</th>
+                        <th>respuesta</th>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-1">Pregunta 1</td>
+                        <td id="si-no-1">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-2">Pregunta 2</td>
+                        <td id="si-no-2">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-3">Pregunta 3</td>
+                        <td id="si-no-3">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-4">Pregunta 4</td>
+                        <td id="si-no-4">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-5">Pregunta 5</td>
+                        <td id="si-no-5">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-6">Pregunta 6</td>
+                        <td id="si-no-6">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-7">Pregunta 7</td>
+                        <td id="si-no-7">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-8">Pregunta 8</td>
+                        <td id="si-no-8">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-9">Pregunta 9</td>
+                        <td id="si-no-9">No respondio</td>
+                    </tr>
+                    <tr>
+                        <td id="pregunta-10">Pregunta 10</td>
+                        <td id="si-no-10">No respondio</td>
+                    </tr>
+                </table>
+                <button class="btn" id="cerrar-quiz">Cerrar</button>
+            </div>
+        </section>
+        <h2 class="title">Razones Para Colonizar Marte</h2>
+        <section class="cards-marte">
+            <article class="card">
+                <h3 class="title">Exploración Humana Sostenida:</h3>
+                <p>Establecer una presencia humana en Marte permitiría una exploración sostenida y detallada del planeta
+                    rojo, con astronautas capaces de realizar investigaciones en el terreno y adaptarse a situaciones
+                    imprevistas.</p>
+            </article>
+            <article class="card">
+                <h3 class="title">Búsqueda de Vida Extraterrestre:</h3>
+                <p>Marte ha sido objeto de investigaciones en busca de signos de vida pasada o presente. Tener colonias
+                    humanas podría facilitar la búsqueda de evidencia de vida y permitir la exploración de regiones que
+                    robots no pueden alcanzar.</p>
+            </article>
+            <article class="card">
+                <h3 class="title">Respaldar la Supervivencia Humana:</h3>
+                <p>La colonización de Marte podría proporcionar una especie de "respaldo" para la supervivencia humana
+                    en caso de catástrofes en la Tierra. La diversificación de la presencia humana en otro planeta
+                    podría aumentar la resiliencia de nuestra especie.</p>
+            </article>
+            <article class="card">
+                <h3 class="title">Recursos y Explotación de Materiales:</h3>
+                <p>Marte tiene recursos naturales, como agua congelada y minerales. Establecer colonias podría permitir
+                    la explotación de estos recursos para la producción de combustible, agua potable y otros elementos
+                    necesarios para el sustento de las colonias.</p>
+            </article>
+            <article class="card">
+                <h3 class="title">Futura Habitabilidad Interplanetaria:</h3>
+                <p>La colonización de Marte podría ser el primer paso hacia la habitabilidad interplanetaria.
+                    Desarrollar tecnologías y sistemas que permitan la vida humana en Marte podría sentar las bases para
+                    futuras colonias en otros cuerpos celestes.
+                </p>
+            </article>
+            <article class="card">
+                <h3 class="title">Inspiración y Unidad Global:</h3>
+                <p>La colonización de Marte podría inspirar a las generaciones futuras y fomentar la cooperación
+                    internacional en la exploración espacial. Podría convertirse en un proyecto que une a la humanidad
+                    en la búsqueda de metas comunes más allá de las fronteras terrestres.</p>
+            </article>
+        </section>
+        <h2 class="title">Misiones realisadas a Marte</h2>
+        <section class="misiones-marte">
+            <article class="msn-r-marte">
+                <h3 class="title">Mars Program (Programa Mariner):</h3>
+                <p>Mariner 4 (1964): Primeras imágenes cercanas de Marte.</p>
+            </article>
+            <article class="msn-r-marte">
+                <h3 class="title">Programa Viking:</h3>
+                <p>Viking 1 (1976): Primer aterrizaje en Marte, llevaba un rover llamado Viking 1 Lander.<br>
+                    Viking 2 (1976): Segundo aterrizaje en Marte con un rover, Viking 2 </p>
+            </article>
+            <article class="msn-r-marte">
+                <h3 class="title">Programa Mars Pathfinder:</h3>
+                <p>Mars Pathfinder (1997): Incluía el rover Sojourner, el cual realizó experimentos y envió imágenes de
+                    la superficie marciana.</p>
+            </article>
+            <article class="msn-r-marte">
+                <h3 class="title">Programa Mars Exploration Rover (MER):</h3>
+                <p>Spirit (2004): Rover que operó hasta 2010.<br>
+                    Opportunity (2004): Rover que operó hasta 2018.
+                </p>
+            </article>
+            <article class="msn-r-marte">
+                <h3 class="title">Mars Express (ESA):</h3>
+                <p>Mars Express (2003): Orbitador que ha estado estudiando la atmósfera y la superficie marciana.</p>
+            </article>
+            <article class="msn-r-marte">
+                <h3 class="title">Mars Reconnaissance Orbiter (MRO):
+                </h3>
+                <p>MRO (2005): Orbitador que ha proporcionado imágenes de alta resolución de la superficie marciana.</p>
+            </article>
+            <article class="msn-r-marte">
+                <h3 class="title">Phoenix Mars Lander (NASA):</h3>
+                <p>Phoenix (2008): Lander que estudió el hielo y la composición del suelo marciano.
+                </p>
+            </article>
+            <article class="msn-r-marte">
+                <h3 class="title">Curiosity Rover (Mars Science Laboratory):</h3>
+                <p>Curiosity (2011): Rover que ha estado estudiando la geología y la habitabilidad pasada de Marte.</p>
+            </article>
+            <article class="msn-r-marte">
+                <h3 class="title">InSight (NASA):</h3>
+                <p>InSight (2018): Lander que estudia el interior de Marte, incluida su actividad sísmica.</p>
+            </article>
+            <article class="msn-r-marte">
+                <h3 class="title">Mars 2020 Rover (Perseverance):</h3>
+                <p>Perseverance (2021): Rover que busca signos de vida pasada y recolecta muestras de rocas para futuras
+                    misiones de retorno de muestras.</p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

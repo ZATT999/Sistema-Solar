@@ -1,0 +1,165 @@
+.slider{
+    margin-top: 4em;
+    user-select: contain;
+}
+.img-slider{
+   border: 1px solid black;
+   object-fit: cover;
+   width: 20%;
+   transition: all 2s ease-in-out;
+   animation: 500ms forwards ease-in-out;
+   &:hover{
+    filter: contrast(100%) saturate(110%);
+
+    width: 100%;
+    transition: all 2s; 
+   }
+}
+img .img-ver-slider{
+    width: 100%;
+    
+    .img-slider{
+        width: 0%;
+    }
+}
+.img-slider:first-child{
+    animation: carga-slider 100ms;
+}
+.img-slider:nth-child(2){
+    animation: carga-slider 200ms;
+}
+.img-slider:nth-child(3){
+    animation: carga-slider 300ms;
+}
+.img-slider:nth-child(4){
+    animation: carga-slider  400ms;
+}
+.img-slider:nth-child(5){
+    animation: carga-slider 500ms;
+}
+@keyframes carga-slider {
+    from{
+        opacity: 0.2;
+        scale: 20%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.planetas-info{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    max-width: 1300px;
+}
+.planeta{
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    border: 5px solid #000;
+    background-color:  rgba(20, 18, 18, 0.938);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 30px;    
+}
+.planeta img {
+    width: 120px;
+    height: 120px;
+    border-radius: 60%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    background-color: #1c1c1c;
+    object-fit: cover;
+    border: 10px solid #403f3f;
+    margin: 0 auto 0 auto;
+}
+.informacion{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap:10px ;
+}
+.info-planetas{
+    display:flex;
+    justify-content:space-between;
+    margin: 0px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    bottom: 50%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.648);
+    justify-content: center;
+    align-items: center;
+    z-index: 111;
+    transition: all 1s ease;
+}
+
+.modal-contenedor {
+    transition: all 1s ease;
+    background-color: #1c1c1c;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    height: auto;
+    max-width: 800px;
+    position: relative;
+    text-align: start;
+    z-index: 111;
+    animation: abrir-modal .2s ease forwards;
+}
+.cerrar-modal{
+    animation: cerrar-modal .2s ease forwards;
+}
+@keyframes abrir-modal {
+    from{
+        scale: 0;
+    }
+    to{
+        scale:100%;
+    }
+}
+@keyframes cerrar-modal {
+    from{
+        scale: 100%;
+    }
+    to{
+        scale:0%;
+    }
+}
+.misiones-f-tierra{
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   flex-flow: wrap;
+   max-width: 1300px;
+}
+.msn{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    width: 350px;
+    height: auto;
+    border-left:10px solid #000000;
+    background-color:  rgba(20, 18, 18, 0.538);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 30px;
+}
+.btn-ver-sistema{
+    margin: 50px 0 0 0;
+}
+.content-btn-sistema{
+    display: flex;
+    gap: 2em;
+    padding: 0px 50px 0 50px;
+}
