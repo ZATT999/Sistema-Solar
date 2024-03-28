@@ -68,10 +68,13 @@
     background-size: cover;
     position: relative;
   }
+  .img-planetas{
+    width: 100%;
+    height: 100%;
+  }
   .sol {
     height: calc(var(--viewport) / 8);
     width: calc(var(--viewport) / 8);
-    background-image: url(/sources/2d/sol.webp);
     background-size: 100%;
     position: absolute;
   }
@@ -91,7 +94,6 @@
   .mercurio {
     width: calc(var(--viewport) / 38);
     height: calc(var(--viewport) / 38);
-    background-image: url(/sources/2d/mercurio.webp);
   }
   @keyframes mercurio {
     from {
@@ -111,7 +113,6 @@
   .venus {
     height: calc(var(--viewport) / 30);
     width: calc(var(--viewport) / 30);
-    background-image: url(/sources/2d/venus.webp);
   }
 
   @keyframes venus {
@@ -142,7 +143,6 @@
   .tierra {
     height: calc(var(--viewport) / 23);
     width: calc(var(--viewport) / 23);
-    background-image: url(/sources/2d/La_tierra_00.webp);
     background-size: cover;
   }
 
@@ -154,7 +154,6 @@
   .marte {
     height: calc(var(--viewport) / 25.5);
     width: calc(var(--viewport) / 25.5);
-    background-image: url(/sources/2d/marte.webp);
     background-size: 110%;
   }
 
@@ -176,7 +175,6 @@
   .jupiter {
     width: calc(var(--viewport) / 15);
     height: calc(var(--viewport) / 15);
-    background-image: url(/sources/2d/jupiter.webp);
     background-size: 110%;
   }
 
@@ -199,7 +197,6 @@
   .saturno {
     width: calc(var(--viewport) / 10);
     height: calc(var(--viewport) / 20);
-    background-image: url(/sources/2d/saturno.webp);
     background-size: 105%;
   }
 
@@ -221,7 +218,6 @@
   .urano {
     height: calc(var(--viewport) / 17);
     width: calc(var(--viewport) / 17);
-    background-image: url(/sources/2d/urano.webp);
     background-size: 75%;
   }
 
@@ -243,7 +239,6 @@
   .neptuno {
     height: calc(var(--viewport) / 30);
     width: calc(var(--viewport) / 30);
-    background-image: url(/sources/2d/neptuno.webp);
     background-size: 110%;
     justify-content: end;
   }
